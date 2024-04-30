@@ -54,6 +54,7 @@ void quicksort(int *array, int low, int high, size_t size)
 	if (low < high)
 	{
 		int pi = partition(array, low, high, size);
+
 		quicksort(array, low, pi - 1, size);
 		quicksort(array, pi + 1, high, size);
 	}
