@@ -25,12 +25,13 @@ void swap(int *a, int *b)
 int partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
-	int i = low - 1;
-	int j;
+	int i, j;
 
-	for (j = low; j < high; j++)
+
+	i = low - 1;
+	for (j = low; j <= high - 1; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] <= pivot)
 		{
 			i++;
 			swap(&array[i], &array[j]);
